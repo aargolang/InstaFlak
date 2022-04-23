@@ -1,1 +1,0 @@
-del .\InstaFlak.* && del ..\System\InstaFlak.* && ..\System\ucc.exe make && copy ..\system\InstaFlak.* .\
