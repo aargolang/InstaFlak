@@ -51,6 +51,7 @@ simulated function Explode(vector HitLocation, vector HitNormal)
 // Decompiled with UE Explorer.
 defaultproperties
 {
-    ShellChunks=10
+    Speed=1700.0
+	ShellChunks=30
     Damage=3000.0
 }
