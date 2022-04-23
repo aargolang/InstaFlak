@@ -58,7 +58,7 @@ function DoFireEffect()
 
 defaultproperties
 {
-    ProjPerFire = 12
+    ProjPerFire=20
     AmmoClass=class'SuperFlakAmmo'
     AmmoPerFire=0
     ProjectileClass=class'SuperFlakChunk'

@@ -19,7 +19,7 @@ defaultproperties
     mLifeRange[1]=0.50
     mRegenRange[0]=100.0
     mRegenRange[1]=100.0
-    mSizeRange[0]=2.0
-    mSizeRange[1]=3.0
+    mSizeRange[0]=10.0
+    mSizeRange[1]=12.0
     mGrowthRate=-0.10
 }
