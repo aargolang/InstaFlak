@@ -34,7 +34,7 @@ simulated function Explode(vector HitLocation, vector HitNormal)
 	start = Location + 10 * HitNormal;
 	if ( Role == ROLE_Authority )
 	{
-		HurtRadius(damage, 220, MyDamageType, MomentumTransfer, HitLocation);	
+		HurtRadius(damage, 300, MyDamageType, MomentumTransfer, HitLocation);	//changed hurt radius from 220 to 300
 		for (i=0; i<ShellChunks; i++)
 		{
 			rot = Rotation;
