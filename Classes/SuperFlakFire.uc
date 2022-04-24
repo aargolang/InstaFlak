@@ -27,7 +27,7 @@ function DoFireEffect()
     
     Aim = AdjustAim(StartProj, AimError);
 
-    SpawnCount = Max(1, ProjPerFire);
+    SpawnCount = class'MutInstaFlak'.default.NumChunks;
 
     switch (SpreadStyle)
     {
@@ -58,7 +58,7 @@ function DoFireEffect()
 
 defaultproperties
 {
-    ProjPerFire=20
+    //ProjPerFire=MutInstaFlak.NumChunks
     AmmoClass=class'SuperFlakAmmo'
     AmmoPerFire=0
     ProjectileClass=class'SuperFlakChunk'
