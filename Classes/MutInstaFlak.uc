@@ -8,8 +8,9 @@ var name WeaponName, AmmoName;
 var string WeaponString, AmmoString;
 var config int NumChunks;
 var config int NumShells;
-var localized string GUIDisplayText[2];
-var localized string GUIDescText[2];
+var config int ExplosionRadius;
+var localized string GUIDisplayText[3];
+var localized string GUIDescText[3];
 
 
 //Defines display text
@@ -19,6 +20,7 @@ static function string GetDisplayText(string PropName)
 	{
 		case "NumChunks": return default.GUIDisplayText[0];
 		case "NumShells": return default.GUIDisplayText[1];
+		case "ExplosionRadius": return default.GUIDisplayText[2];
 	}
 }
 
@@ -29,6 +31,7 @@ static event string GetDescriptionText(string PropName)
 	{
 		case "NumChunks": return default.GUIDescText[0];
 		case "NumShells": return default.GUIDescText[1];
+		case "ExplosionRadius": return default.GUIDescText[2];
 	}
 }
 
@@ -39,6 +42,7 @@ static function FillPlayInfo(PlayInfo PlayInfo)
 
 	PlayInfo.AddSetting(default.RulesGroup, "NumChunks", GetDisplayText("NumChunks"), 0, 0, "Text", "4;1:50");
 	PlayInfo.AddSetting(default.RulesGroup, "NumShells", GetDisplayText("NumShells"), 0, 0, "Text", "4;1:10");
+	PlayInfo.AddSetting(default.RulesGroup, "ExplosionRadius", GetDisplayText("ExplosionRadius"), 0, 0, "Text", "4;0:500");
 }
 
 
@@ -138,8 +142,11 @@ defaultproperties
     RemoteRole=2
 	NumChunks=20
 	NumShells=3
+	ExplosionRadius=300
 	GUIDisplayText[0]="Chunks"
 	GUIDisplayText[1]="Shells"
+	GUIDisplayText[2]="Explosion Radius"
 	GUIDescText[0]="Number of flaks for primary fire"
 	GUIDescText[1]="Number of shells for secondary fire"
+	GUIDescText[2]="Radius of damage from shell explosion"
 }
