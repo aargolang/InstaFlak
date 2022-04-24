@@ -11,9 +11,6 @@ var config int NumShells;
 var localized string GUIDisplayText[2];
 var localized string GUIDescText[2];
 
-// var config bool bAllowTranslocator;
-// var config bool bAllowBoost;
-// var localized string TranslocDisplayText, BoostDisplayText, TranslocDescText, BoostDescText;
 
 //Defines display text
 static function string GetDisplayText(string PropName)
@@ -23,7 +20,6 @@ static function string GetDisplayText(string PropName)
 		case "NumChunks": return default.GUIDisplayText[0];
 		case "NumShells": return default.GUIDisplayText[1];
 	}
-	//return Super.GetDisplayText(PropName);
 }
 
 //Defines description text
@@ -34,7 +30,6 @@ static event string GetDescriptionText(string PropName)
 		case "NumChunks": return default.GUIDescText[0];
 		case "NumShells": return default.GUIDescText[1];
 	}
-	//return Super.GetDescriptionText(PropName);
 }
 
 //Adds config options to config window
@@ -46,25 +41,6 @@ static function FillPlayInfo(PlayInfo PlayInfo)
 	PlayInfo.AddSetting(default.RulesGroup, "NumShells", GetDisplayText("NumShells"), 0, 0, "Text", "4;1:10");
 }
 
-
-// static function FillPlayInfo(PlayInfo PlayInfo)
-// {
-// 	Super.FillPlayInfo(PlayInfo);
-
-// 	PlayInfo.AddSetting(default.RulesGroup, "bAllowTranslocator", default.TranslocDisplayText, 0, 1, "Check");
-// 	PlayInfo.AddSetting(default.RulesGroup, "bAllowBoost", default.BoostDisplayText, 0, 1, "Check");
-// }
-
-// static event string GetDescriptionText(string PropName)
-// {
-// 	switch (PropName)
-// 	{
-// 		case "bAllowTranslocator":	return default.TranslocDescText;
-// 		case "bAllowBoost":			return default.BoostDescText;
-// 	}
-
-// 	return Super.GetDescriptionText(PropName);
-// }
 
 simulated function BeginPlay()
 {
@@ -86,12 +62,7 @@ simulated function BeginPlay()
 
 function PostBeginPlay()
 {
-	
 	Super.PostBeginPlay();
-	// if ( bAllowBoost && (TeamGame(Level.Game) != None) )
-	// 	TeamGame(Level.Game).TeammateBoost = 1.0;
-	// if ( bAllowTranslocator )
-	// 	DeathMatch(Level.Game).bOverrideTranslocator = true;
 }
 
 function string RecommendCombo(string ComboName)
@@ -132,12 +103,6 @@ function bool CheckReplacement(Actor Other, out byte bSuperRelevant)
             return true;
         }
 
-		// if ( Other.IsA('TransLauncher') && bAllowTranslocator )
-		// {
-        //     bSuperRelevant = 0;
-        //     return true;
-        // }
-
 		if ( !Other.IsA(WeaponName) )
 		{
 			Level.Game.bWeaponStay = false;
@@ -164,10 +129,6 @@ defaultproperties
     AmmoName=SuperFlakAmmo
     WeaponString="InstaFlak.SuperFlakCannon"
     AmmoString="InstaFlak.SuperFlakAmmo"
-    // TranslocDisplayText="Allow Translocator"
-    // BoostDisplayText="Allow Teammate boosting"
-    // TranslocDescText="Players get a Translocator in their inventory."
-    // BoostDescText="Teammates get a big boost when shot by the instagib cannon."
     DefaultWeaponName="InstaFlak.SuperFlakCannon"
     GroupName="InstaFlak"
     FriendlyName="InstaFlak"
