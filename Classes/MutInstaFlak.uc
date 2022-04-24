@@ -42,8 +42,8 @@ static function FillPlayInfo(PlayInfo PlayInfo)
 {
 	Super.FillPlayInfo(PlayInfo);
 
-	PlayInfo.AddSetting(default.RulesGroup, "NumChunks", GetDisplayText("NumChunks"), 0,0,"Text");
-	PlayInfo.AddSetting(default.RulesGroup, "NumShells", GetDisplayText("NumShells"), 0,0,"Text");
+	PlayInfo.AddSetting(default.RulesGroup, "NumChunks", GetDisplayText("NumChunks"), 0, 0, "Text", "4;1:50");
+	PlayInfo.AddSetting(default.RulesGroup, "NumShells", GetDisplayText("NumShells"), 0, 0, "Text", "4;1:10");
 }
 
 

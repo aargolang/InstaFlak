@@ -27,7 +27,7 @@ function DoFireEffect()
     
     Aim = AdjustAim(StartProj, AimError);
 
-    SpawnCount = 1;
+    SpawnCount = class'MutInstaFlak'.default.NumShells;
 
     switch (SpreadStyle)
     {

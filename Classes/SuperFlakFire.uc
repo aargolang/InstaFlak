@@ -9,7 +9,6 @@ function DoFireEffect()
     local int p;
     local int SpawnCount;
     local float theta;
-    //local int deleteme;
 
     Instigator.MakeNoise(1.0);
     Weapon.GetViewAxes(X,Y,Z);
@@ -28,9 +27,7 @@ function DoFireEffect()
     
     Aim = AdjustAim(StartProj, AimError);
 
-    //deleteme = MutInstaFlak.NumChunks;
-
-    SpawnCount = 'MutInstaFlak'.NumChunks;
+    SpawnCount = class'MutInstaFlak'.default.NumChunks;
 
     switch (SpreadStyle)
     {
