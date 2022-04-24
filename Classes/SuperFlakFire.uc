@@ -9,6 +9,7 @@ function DoFireEffect()
     local int p;
     local int SpawnCount;
     local float theta;
+    //local int deleteme;
 
     Instigator.MakeNoise(1.0);
     Weapon.GetViewAxes(X,Y,Z);
@@ -27,7 +28,9 @@ function DoFireEffect()
     
     Aim = AdjustAim(StartProj, AimError);
 
-    SpawnCount = Max(1, ProjPerFire);
+    //deleteme = MutInstaFlak.NumChunks;
+
+    SpawnCount = 'MutInstaFlak'.NumChunks;
 
     switch (SpreadStyle)
     {
@@ -58,7 +61,7 @@ function DoFireEffect()
 
 defaultproperties
 {
-    ProjPerFire=20
+    //ProjPerFire=MutInstaFlak.NumChunks
     AmmoClass=class'SuperFlakAmmo'
     AmmoPerFire=0
     ProjectileClass=class'SuperFlakChunk'

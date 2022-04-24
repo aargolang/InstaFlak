@@ -27,7 +27,7 @@ function DoFireEffect()
     
     Aim = AdjustAim(StartProj, AimError);
 
-    SpawnCount = Max(1, ProjPerFire);
+    SpawnCount = 1;
 
     switch (SpreadStyle)
     {
@@ -58,7 +58,7 @@ function DoFireEffect()
 
 defaultproperties
 {
-    ProjPerFire=3
+    //ProjPerFire=MutInstaFlak.NumShells
     Spread=2000.0
     SpreadStyle=SS_Random
     AmmoClass=class'SuperFlakAmmo'
