@@ -1,8 +1,21 @@
 // class SuperFlakCannonPickup extends FlakCannonPickup;
 class SuperFlakCannonPickup extends UTWeaponPickup;
 
+#exec OBJ LOAD FILE=InstaFlakTextures.utx
 
 //===
+
+static function StaticPrecache(LevelInfo L)
+{
+    L.AddPrecacheMaterial(Texture'InstaFlakTextures.skins.InstaFlakTex0');
+    super.StaticPrecache(L);
+}
+
+simulated function UpdatePrecacheMaterials()
+{
+    Level.AddPrecacheMaterial(Texture'InstaFlakTextures.skins.InstaFlakTex0');
+	super.UpdatePrecacheMaterials();
+}
 
 defaultproperties
 {
