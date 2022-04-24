@@ -62,4 +62,5 @@ defaultproperties
     AmmoClass=class'SuperFlakAmmo'
     AmmoPerFire=0
     ProjectileClass=class'SuperFlakChunk'
+    FireRate=1
 }
