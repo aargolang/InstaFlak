@@ -41,6 +41,7 @@ defaultproperties
     AmbientGlow=0
     bBounce=true
     Lifespan=1.5
+    StaticMesh=StaticMesh'InstaFlakMeshes.FlakChunk'
     // LightHue=195
     // LightBrightness=255.0
     // LightEffect=LE_Shock
