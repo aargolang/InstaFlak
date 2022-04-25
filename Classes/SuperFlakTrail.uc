@@ -13,13 +13,17 @@ simulated function BeginPlay()
 
 defaultproperties
 {
-    mParticleType=6
-    mSpawnVecB=(X=10.0,Y=0.0,Z=0.0)
-    mLifeRange[0]=0.50
-    mLifeRange[1]=0.50
-    mRegenRange[0]=160.0
-    mRegenRange[1]=160.0
-    mSizeRange[0]=15.0
-    mSizeRange[1]=20.0
-    mGrowthRate=-0.10
+    mParticleType=1
+    mSpawnVecB=(X=20.0,Y=0.0,Z=0.0)
+    mLifeRange[0]=0.5
+    mLifeRange[1]=0.5
+    mRegenRange[0]=10.0
+    mRegenRange[1]=10.0
+    mSizeRange[0]=0.01
+    mSizeRange[1]=0.01
+    mGrowthRate=75.0
+    mSpawningType=1
+    // mAttenKa=0.01
+    // mAttenKb=1.0
+    //mAttenFunc=3
 }
