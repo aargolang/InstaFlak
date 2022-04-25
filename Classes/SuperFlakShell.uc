@@ -1,7 +1,5 @@
 class SuperFlakShell extends FlakShell;
 
-//var int ShellChunks;
-
 simulated function PostBeginPlay()
 {
 	local Rotator R;
@@ -52,6 +50,5 @@ simulated function Explode(vector HitLocation, vector HitNormal)
 defaultproperties
 {
     Speed=1700.0
-	//ShellChunks=30
     Damage=3000.0
 }
