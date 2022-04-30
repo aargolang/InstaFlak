@@ -156,4 +156,5 @@ defaultproperties
 	GUIDescText[1]="Number of shells for secondary fire"
 	GUIDescText[2]="Number of flaks from shell explosion"
 	GUIDescText[3]="Radius of damage from shell explosion"
+	bAddToServerPackages=True
 }
