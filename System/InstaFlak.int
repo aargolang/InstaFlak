@@ -1,0 +1,12 @@
+[MutInstaFlak]
+GUIDisplayText[0]="Chunks"
+GUIDisplayText[1]="Shells"
+GUIDisplayText[2]="Shell Chunks"
+GUIDisplayText[3]="Explosion Radius"
+GUIDescText[0]="Number of flaks for primary fire"
+GUIDescText[1]="Number of shells for secondary fire"
+GUIDescText[2]="Number of flaks from shell explosion"
+GUIDescText[3]="Radius of damage from shell explosion"
+FriendlyName="InstaFlak"
+Description="Instagib with Flak Cannons!"
+

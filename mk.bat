@@ -5,5 +5,6 @@ IF "%1"=="a" (
     copy Animations\InstaFlak.ukx ..\Animations
     copy StaticMeshes\InstaFlakMeshes.usx ..\StaticMeshes
     copy System\InstaFlakConfig.ini ..\System
+    copy System\InstaFlak.int ..\System
 )
 del ..\System\InstaFlak.* && ..\System\ucc.exe make
